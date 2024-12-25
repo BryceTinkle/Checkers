@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        body{
+            background-color: blanchedalmond; 
+        }
+        .window{
+            width: 441px;
+            height: 441px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            background-color: white;
+        }
+        .scoreContainer{
+            position: absolute;
+            left: 200px;
+            top: 500px;
+            translate: -50% -50%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+       
+       
+    </style>
+</head>
+<body>
+
+
+        <canvas id="canvas" height="100%" width="100%"></canvas>
+        <div class="scoreContainer" id="score">
+            <p class="score" >player 1: <span id="score1"></span></p>
+            <h1 class="turn" id="turn">red turn</h1>
+            <p class="score" >player 2:  <span id="score2"></span></p>
+        </div>
+   
+    <p id="mouseIndex" ></p>
+    
+    <p id="botscore1" >0</p>
+    <p id="botscore2" >0</p>
+    <button onclick="botOn = botOn == true ? false : true">bot</button>
+    <button onclick="slow = slow == true ? false : true">slow</button>
+
+    <button onclick="generateBoard()">board</button>
+    <button onclick="saveGame()">Save Game</button>
+    <button onclick="importSave()">Import Save</button>
+
+
+
+
+    <script src="checkers2.js"></script>
+</body>
+</html>
